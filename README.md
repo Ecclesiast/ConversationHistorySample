@@ -29,6 +29,9 @@ This bot has been created using [Bot Framework][1]
 
 ### Conversation History 
 - Go to wwwroot
+  Here you need:
+  - default.html
+  - js.js
 
 [1]: https://dev.botframework.com
 [4]: https://dotnet.microsoft.com/download
