@@ -6,9 +6,13 @@
 
   <ItemGroup>
     <Compile Remove="%2a%2a\**" />
+    <Compile Remove="PostDeployScripts\**" />
     <Content Remove="%2a%2a\**" />
+    <Content Remove="PostDeployScripts\**" />
     <EmbeddedResource Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="PostDeployScripts\**" />
     <None Remove="%2a%2a\**" />
+    <None Remove="PostDeployScripts\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +29,10 @@
   <Import Project="..\PostDeployScripts\IncludeSources.targets" Condition="Exists('..\PostDeployScripts\IncludeSources.targets')" />
   <ItemGroup>
     <None Remove="%2a%2a\%2a.csproj" />
+    <None Remove=".deployment" />
+    <None Remove="build.cmd" />
+    <None Remove="deploy.cmd" />
+    <None Remove="publish.cmd" />
   </ItemGroup>
 
 </Project>
