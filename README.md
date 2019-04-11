@@ -60,6 +60,7 @@ dl = new DirectLine.DirectLine({
 });
 ```
 ## Webchat Object
+Then create WebChat object with static **userID**
 ```javascript
 window.WebChat.renderWebChat({
 	directLine: dl,
