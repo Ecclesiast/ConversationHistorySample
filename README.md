@@ -27,6 +27,9 @@ This bot has been created using [Bot Framework][1]
 - Change **MicrosoftAppId** and **MicrosoftAppPassword** using values from Azure settings
 - Change **DirectLineSecret** with previously saved
 
+### Conversation History 
+- Go to wwwroot
+
 [1]: https://dev.botframework.com
 [4]: https://dotnet.microsoft.com/download
 [10]: https://portal.azure.com
