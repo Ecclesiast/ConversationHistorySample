@@ -1,11 +1,7 @@
 # CoreBot
 Bot Framework v4 core bot sample.
 
-This bot has been created using [Bot Framework][1], it shows how to:
-- Use [LUIS][11] to implement core AI capabilities
-- Implement a multi-turn conversation using Dialogs
-- Handle user interruptions for such things as `Help` or `Cancel`
-- Prompt for and validate requests for information from the user
+This bot has been created using [Bot Framework][1]
 
 ## Prerequisites
 - [.NET Core SDK][4] version 2.1
