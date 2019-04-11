@@ -1,6 +1,8 @@
 *.dll
 *.pdb
+*.cmd
 obj/**
 bin/**
 runtimes/**
 /.vs
+PostDeployScripts/
