@@ -28,7 +28,7 @@ This bot has been created using [Bot Framework][1]
 - Change **DirectLineSecret** with previously saved
 
 ### Conversation History 
-- Go to wwwroot/
+- Go to **wwwroot**. Here you need:
   - default.html
   - js.js
 
