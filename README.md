@@ -27,11 +27,45 @@ This bot has been created using [Bot Framework][1]
 - Change **MicrosoftAppId** and **MicrosoftAppPassword** using values from Azure settings
 - Change **DirectLineSecret** with previously saved
 
-### Conversation History 
+# Conversation History 
 - Go to **wwwroot**. Here you need:
   - default.html
   - js.js
-
+## Initialization Without History
+Request to a HomeController for token generation
+```javascript
+const res = await fetch('/api/token/generate', { method: 'POST' });
+const { token, conversationId } = await res.json();
+```
+Initialize DirectLine object and save conversationId
+```javascript
+ dl = new DirectLine.DirectLine({ 
+	token: token
+});
+createCookie("conversationId", conversationId, 365);
+```
+## Initialization With History
+Request to a HomeController for token refreshing
+```javascript
+const response = await fetch('/api/token/refresh?conversationId=' + readCookie("conversationId"), { method: 'GET' });
+const refreshData = await response.json();
+```
+Initialize chat with refreshing data
+```javascript
+dl = new DirectLine.DirectLine({
+    token: refreshData.token,
+    streamUrl: refreshData.streamUrl,
+    webSocket: false,
+    conversationId: readCookie("conversationId")
+});
+```
+## Webchat Object
+```javascript
+window.WebChat.renderWebChat({
+	directLine: dl,
+	userID: "default-user"
+}, document.getElementById('webchat'));
+```
 [1]: https://dev.botframework.com
 [4]: https://dotnet.microsoft.com/download
 [10]: https://portal.azure.com
