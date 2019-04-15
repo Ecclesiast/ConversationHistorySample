@@ -1,4 +1,4 @@
-# CoreBot
+# Conversation History Bot
 Bot Framework v4 core bot sample.
 
 This bot has been created using [Bot Framework][1]
